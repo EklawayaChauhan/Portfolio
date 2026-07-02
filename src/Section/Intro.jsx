@@ -44,7 +44,7 @@ const Intro = React.forwardRef(function Intro(props, ref) {
       {/* Stack Cards */}
       <div className="flex gap-6 flex-col md:flex-row w-full stagger-reveal">
         {/* Design card */}
-        <div className="group relative overflow-hidden h-72 w-full md:w-[45%] bg-[#1c1b19]/40 backdrop-blur-xl border border-white/[0.05] rounded-[2rem] p-10 flex flex-col justify-between transition-all duration-500 hover:border-orange-500/40 hover:bg-orange-500/[0.03] hover:shadow-[0_20px_40px_-15px_rgba(249,115,22,0.15)]">
+        <div className="group relative overflow-hidden h-100 w-full md:w-[45%] bg-[#1c1b19]/40 backdrop-blur-xl border border-white/[0.05] rounded-[2rem] p-10 flex flex-col justify-between transition-all duration-500 hover:border-orange-500/40 hover:bg-orange-500/[0.03] hover:shadow-[0_20px_40px_-15px_rgba(249,115,22,0.15)]">
           <div className="absolute -right-8 -top-8 w-40 h-40 bg-orange-500/10 rounded-full blur-[60px] group-hover:bg-orange-500/20 transition-all duration-700 animate-float"></div>
 
           <div className="p-4 bg-orange-500/10 rounded-2xl w-fit border border-orange-500/20 text-orange-500 group-hover:bg-orange-500 group-hover:text-white transition-all duration-500">
@@ -66,7 +66,7 @@ const Intro = React.forwardRef(function Intro(props, ref) {
         </div>
 
         {/* Dev card */}
-        <div className="group relative overflow-hidden h-72 w-full md:w-[55%] bg-[#1c1b19]/40 backdrop-blur-xl border border-white/[0.05] rounded-[2rem] p-10 flex flex-col justify-between transition-all duration-500 hover:border-green-400/40 hover:bg-green-400/[0.03] hover:shadow-[0_20px_40px_-15px_rgba(74,222,128,0.15)]">
+        <div className="group relative overflow-hidden h-100 w-full md:w-[55%] bg-[#1c1b19]/40 backdrop-blur-xl border border-white/[0.05] rounded-[2rem] p-10 flex flex-col justify-between transition-all duration-500 hover:border-green-400/40 hover:bg-green-400/[0.03] hover:shadow-[0_20px_40px_-15px_rgba(74,222,128,0.15)]">
           <div className="absolute -right-8 -top-8 w-40 h-40 bg-green-400/10 rounded-full blur-[60px] group-hover:bg-green-400/20 transition-all duration-700 animate-float delay-1000"></div>
 
           <div className="p-4 bg-green-400/10 rounded-2xl w-fit border border-green-400/20 text-green-500 group-hover:bg-green-400 group-hover:text-black transition-all duration-500">
@@ -76,7 +76,9 @@ const Intro = React.forwardRef(function Intro(props, ref) {
           <div className="relative z-10">
             <h3 className="text-gray-500 text-sm font-semibold tracking-widest uppercase mb-2">Development Stack</h3>
             <h1 className="text-white font-bold text-2xl leading-tight">
-              React, Next, Tailwind, <br /> Bootstrap & JQuery
+              React • Next.js • Tailwind CSS <br />
+              Python • Flask • FastAPI <br />
+              PostgreSQL • Git • GitHub
             </h1>
           </div>
 

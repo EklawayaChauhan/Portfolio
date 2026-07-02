@@ -18,7 +18,7 @@ function Navbar({
     { icon: GoFileSubmodule, label: "projects", onClick: onProjectsClick },
     { icon: CgWorkAlt, label: "experience", onClick: onExperienceClick },
     { icon: GrTechnology, label: "skills", onClick: onSkillsClick },
-    { icon: LuNotebookPen, label: "contact", onClick: onContactClick },
+
   ];
 
   return (
