@@ -14,7 +14,10 @@ import {
   SiPostgresql,
   SiMongodb,
   SiVite,
-  SiFramer
+  SiFramer,
+  SiAnthropic,
+  SiGooglegemini,
+  SiCloudflare,
 } from "react-icons/si";
 import React from "react";
 
@@ -33,15 +36,19 @@ export const projects = [
   },
   {
     id: 2,
-    link: "https://ganjrelawn.com/",
-    pic: "Ganjrelawn.png",
-    heading: "Ganjre Lawn",
-    discr: "Wedding Planner application",
+    link: "https://github.com/EklawayaChauhan/roomify.git",
+    pic: "roomify.png",
+    heading: "Roomify",
+    discr: "Roomify is an AI-powered architectural visualization platform that transforms 2D floor plans into realistic 3D renders",
     tags: [
       { name: "React 19", icon: <FaReact color="#61DAFB" /> },
+      { name: "TypeScript", icon: <SiTypescript color="#3178C6" /> },
       { name: "Vite", icon: <SiVite color="#646CFF" /> },
-      { name: "Tailwind 4", icon: <RiTailwindCssFill color="#06B6D4" /> },
+      { name: "Tailwind CSS 4", icon: <RiTailwindCssFill color="#06B6D4" /> },
       { name: "Motion", icon: <SiFramer color="#0055FF" /> },
+      { name: "Puter", icon: <SiCloudflare color="#F38020" /> },
+      { name: "Claude AI", icon: <SiAnthropic color="#D97706" /> },
+      { name: "Gemini AI", icon: <SiGooglegemini color="#4285F4" /> },
     ],
   },
   // {
