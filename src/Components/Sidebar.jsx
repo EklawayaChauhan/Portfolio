@@ -67,7 +67,7 @@ function Sidebar() {
 
         {/* Download CV — white default, orange on hover */}
         <a
-          href="/Muhammad_Abdullah.pdf"
+          href="/temp_resume.pdf"
           download
           className="relative overflow-hidden group text-center w-full bg-white text-black font-semibold py-3 rounded-xl hover:bg-orange-500 hover:text-white transition-all duration-300 shadow-lg active:scale-95 block uppercase tracking-widest text-sm"
         >
