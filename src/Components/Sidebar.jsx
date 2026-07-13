@@ -1,6 +1,7 @@
 import React from "react";
 import { FaGithub } from "react-icons/fa";
 import { CiLinkedin } from "react-icons/ci";
+import ProfileCard from "./ProfileCard";
 
 const socialLinks = [
   {
@@ -16,40 +17,45 @@ const socialLinks = [
 ];
 
 function Sidebar() {
+  const handleDownloadCV = () => {
+    const link = document.createElement("a");
+    link.href = "/temp_resume.pdf";
+    link.download = "temp_resume.pdf";
+    link.click();
+  };
+
   return (
     <div className="animated-border relative flex flex-col p-[2px] rounded-2xl lg:sticky top-20 shadow-2xl">
-      <div className="bg-[#1a1816] p-5 lg:p-10 rounded-2xl items-center gap-8 flex flex-col">
-        {/* Full image — no cropping */}
-        <div className="relative group w-full overflow-hidden rounded-2xl">
-          <img
-            src="Media.jpg"
-            alt="Abdullah"
-            className="w-full rounded-2xl shadow-2xl transition-transform duration-500 group-hover:scale-[1.03]"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent rounded-2xl" />
-          <span className="absolute bottom-3 left-3 text-white text-xs font-medium bg-orange-500/80 px-2.5 py-1 rounded-full backdrop-blur-sm">
-            Available for Work
-          </span>
-        </div>
+      <div className="bg-[#1a1816] p-5 lg:p-6 rounded-2xl items-center gap-6 flex flex-col">
 
-        {/* Name */}
-        <div className="text-center">
-          <h1 className="font-poppins font-bold text-3xl text-white">
-            Eklawaya
-          </h1>
-          <div className="h-0.5 w-10 bg-orange-500 rounded-full mx-auto mt-2" />
+        {/* 3D Tilt Profile Card */}
+        <div className="w-full">
+          <ProfileCard
+            name="Eklawaya"
+            title="Software Engineer"
+            handle="eklawayachauhan"
+            status="Available for Work"
+            contactText="Download CV"
+            avatarUrl="/Media.png"
+            showUserInfo={true}
+            enableTilt={true}
+            enableMobileTilt={false}
+            onContactClick={handleDownloadCV}
+            behindGlowEnabled={true}
+            behindGlowColor="rgba(249, 115, 22, 0.4)"
+          />
         </div>
 
         {/* Bio */}
-        <div className="lg:mt-2">
-          <p className="font-medium leading-7 text-gray-500 text-center text-xl">
+        <div className="px-2">
+          <p className="font-medium leading-7 text-gray-500 text-center text-lg">
             A <span className="text-white/80">Software Engineer</span> who has
             developed countless innovative solutions.
           </p>
         </div>
 
         {/* Social icons — show original brand color on hover */}
-        <div className="flex gap-4 text-2xl text-gray-500">
+        <div className="flex gap-4 text-2xl text-gray-500 pb-2">
           {socialLinks.map(({ Icon, href, hoverColor }, i) => (
             <a
               key={i}
@@ -65,15 +71,6 @@ function Sidebar() {
           ))}
         </div>
 
-        {/* Download CV — white default, orange on hover */}
-        <a
-          href="/temp_resume.pdf"
-          download
-          className="relative overflow-hidden group text-center w-full bg-white text-black font-semibold py-3 rounded-xl hover:bg-orange-500 hover:text-white transition-all duration-300 shadow-lg active:scale-95 block uppercase tracking-widest text-sm"
-        >
-          <span className="relative z-10">Download CV</span>
-          <div className="absolute inset-0 bg-gradient-to-r from-orange-500/0 via-white/20 to-orange-500/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000" />
-        </a>
       </div>
     </div>
   );

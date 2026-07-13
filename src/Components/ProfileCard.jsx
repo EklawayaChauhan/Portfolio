@@ -501,7 +501,7 @@ const ProfileCardComponent = ({
               />
               {showUserInfo && (
                 <div
-                  className="absolute z-[2] flex items-center justify-between backdrop-blur-[30px] border border-white/10 pointer-events-auto"
+                  className="absolute z-[2] flex items-center justify-center backdrop-blur-[30px] border border-white/10 pointer-events-auto w-[calc(100%-40px)] mx-auto"
                   style={
                     {
                       '--ui-inset': '20px',
@@ -515,31 +515,8 @@ const ProfileCardComponent = ({
                     }
                   }
                 >
-                  <div className="flex items-center gap-3">
-                    <div
-                      className="rounded-full overflow-hidden border border-white/10 flex-shrink-0"
-                      style={{ width: '48px', height: '48px' }}
-                    >
-                      <img
-                        className="w-full h-full object-cover rounded-full"
-                        src={miniAvatarUrl || avatarUrl}
-                        alt={`${name || 'User'} mini avatar`}
-                        loading="lazy"
-                        style={{ display: 'block', gridArea: 'auto', borderRadius: '50%', pointerEvents: 'auto' }}
-                        onError={e => {
-                          const t = e.target;
-                          t.style.opacity = '0.5';
-                          t.src = avatarUrl;
-                        }}
-                      />
-                    </div>
-                    <div className="flex flex-col items-start gap-1.5">
-                      <div className="text-sm font-medium text-white/90 leading-none">@{handle}</div>
-                      <div className="text-sm text-white/70 leading-none">{status}</div>
-                    </div>
-                  </div>
                   <button
-                    className="border border-white/10 rounded-lg px-4 py-3 text-xs font-semibold text-white/90 cursor-pointer backdrop-blur-[10px] transition-all duration-200 ease-out hover:border-orange-500 hover:text-orange-500 hover:-translate-y-px"
+                    className="border border-white/10 rounded-lg px-6 py-3 text-sm font-semibold text-white/90 cursor-pointer backdrop-blur-[10px] transition-all duration-200 ease-out hover:border-orange-500 hover:text-orange-500 hover:-translate-y-px w-full"
                     onClick={handleContactClick}
                     style={{ pointerEvents: 'auto', display: 'block', gridArea: 'auto', borderRadius: '8px' }}
                     type="button"
